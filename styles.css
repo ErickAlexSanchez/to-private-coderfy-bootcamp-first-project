@@ -1,0 +1,47 @@
+:root {
+    --drk-background: #0f172a;
+    --main-color: #38bdf8;
+    --border-radius: 5px;
+    --padding-button: 15px 30px;
+    --text-highlight-1: aliceblue; 
+}
+
+body {
+  background: var(--drk-background);
+  color: var(--main-color);
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.btn--welcome {
+  padding: var(--padding-button);
+  background: var(--main-color);
+  color: var(--drk-background);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.new-text {
+    font-weight:bolder;
+    color: aliceblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.highlights__list-container{
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: var(--text-highlight-1);
+}
+
+.highlights__list-container li:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
