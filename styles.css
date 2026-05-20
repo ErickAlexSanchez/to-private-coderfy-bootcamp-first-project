@@ -1,6 +1,6 @@
 :root {
-    --drk-background: #0f172a;
-    --main-color: #38bdf8;
+    --drk-background: #20093a;
+    --main-color: #aa8bec;
     --border-radius: 5px;
     --padding-button: 15px 30px;
     --text-highlight-1: aliceblue; 
@@ -44,4 +44,8 @@ body {
 .highlights__list-container li:hover{
     color: var(--main-color);
     cursor: pointer;
+}
+
+.header{
+    color: var(--text-highlight-1);
 }
