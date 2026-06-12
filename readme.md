@@ -2,6 +2,9 @@
 
 This is a homework started in the first class.
 
+# Live Preview
+[![Live Preview](https://img.shields.io/badge/Demo-Live_Preview-aa8bec?style=for-the-badge&logo=vercel&logoColor=white)](https://to-private-coderfy-bootcamp-first-p.vercel.app/)
+
 ## Project structure
 
 - `index.html` - contains the structure.
