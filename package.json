@@ -1,0 +1,25 @@
+{
+  "name": "fullstack-bootcamp-coderfy",
+  "version": "1.0.0",
+  "description": "This is a homework started in the first class.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{html,css,js}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickAlexSanchez/to-private-coderfy-bootcamp-first-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ErickAlexSanchez/to-private-coderfy-bootcamp-first-project/issues"
+  },
+  "homepage": "https://github.com/ErickAlexSanchez/to-private-coderfy-bootcamp-first-project#readme",
+  "devDependencies": {
+    "prettier": "^3.8.4"
+  }
+}

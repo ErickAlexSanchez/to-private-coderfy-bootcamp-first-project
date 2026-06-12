@@ -1,17 +1,76 @@
+/* CSS variables */
 :root {
-    --drk-background: #20093a;
-    --main-color: #aa8bec;
-    --border-radius: 5px;
-    --padding-button: 15px 30px;
-    --text-highlight-1: aliceblue; 
+  --drk-background: #10032e;
+  --drk-background-gradient: linear-gradient(135deg, #10032e 0%, #2a0845 100%);
+  --main-color: #b5a8ef;
+  --border-radius: 1.5rem;
+  --padding-button: 15px 30px;
+  --text-highlight-1: aliceblue;
+  --profile-photos-max-width: 8rem;
+  --title-size: 3.5rem;
+  --sub-title-size: 2.6rem;
+  --text-size: 1.4rem;
+  --button-padding: 0.7rem;
+  --button-border: 1rem;
+}
+
+/* Basic CSS configuration */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--drk-background);
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CSS customization */
+
+body {
+  background: var(--drk-background-gradient);
   color: var(--main-color);
   font-family: sans-serif;
   text-align: center;
   padding-top: 50px;
+  font-size: var(--text-size);
+  align-items: center;
 }
 
 .btn--welcome {
@@ -25,27 +84,304 @@ body {
 }
 
 .new-text {
-    font-weight:bolder;
-    color: aliceblue;
+  font-weight: bolder;
+  color: aliceblue;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
-.highlights__list-container{
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    color: var(--text-highlight-1);
+.main-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 38rem;
+  padding: 3rem;
 }
 
-.highlights__list-container li:hover{
-    color: var(--main-color);
-    cursor: pointer;
+.container.header {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0rem;
 }
 
-.header{
-    color: var(--text-highlight-1);
+.container.name {
+  margin-left: 1rem;
+  display: flex;
+  min-width: 70%;
+  align-items: start;
+  justify-content: center;
+}
+
+.user-name {
+  font-size: var(--sub-title-size);
+  color: var(--text-highlight-1);
+}
+
+.container.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--drk-background);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.focus-title {
+  font-size: var(--sub-title-size);
+  color: var(--text-highlight-1);
+  font-weight: bold;
+}
+
+.profile-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  min-height: 10rem;
+  height: auto;
+}
+
+.profile-photo__image {
+  box-shadow: 0 0 9px 1px var(--text-highlight-1);
+  border: none;
+  width: 100%;
+  height: 80%;
+  max-width: 8rem;
+  border-radius: 50%;
+  background-image: url('assets/profile.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+}
+
+.glass-card:hover {
+  transition: ease, 100ms;
+  background: rgba(52, 20, 20, 0.08);
+  backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Fonts */
+.poppins-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Custom Button */
+
+.neon-button {
+  color: var(--text-highlight-1);
+  background: transparent;
+  border: none;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-7 {
+  color: var(--text-highlight-1);
+  line-height: 40px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  bottom: 0;
+  background: var(--text-highlight-1);
+  box-shadow: 0 0 5px var(--text-highlight-1);
+  transition: all 0.3s ease;
+}
+.btn-7:before {
+  height: 50%;
+  width: 2px;
+}
+.btn-7:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  background: var(--text-highlight-1);
+  box-shadow: 0 0 5px var(--text-highlight-1);
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 20%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}
+
+.btnGhost {
+  color: var(--text-highlight-1);
+  background: transparent;
+  border: none;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 5px var(--text-highlight-1);
 }
