@@ -187,6 +187,30 @@ body {
     inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .container.header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .glass-card {
+    min-width: 80%;
+    width: auto;
+  }
+  .profile-photo,
+  .profile-photo__image {
+    width: 100%;
+    min-height: 8rem;
+  }
+  .container.name {
+    text-align: center;
+    align-items: center;
+  }
+  .container.highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Fonts */
 .poppins-thin {
   font-family: 'Poppins', sans-serif;
